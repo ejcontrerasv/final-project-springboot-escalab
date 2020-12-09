@@ -1,0 +1,1130 @@
+{
+	"info": {
+		"_postman_id": "7661266b-ddfc-457e-b311-5a9778503c22",
+		"name": "Proyecto-Final-SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Document",
+			"item": [
+				{
+					"name": "ListarPorUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/list/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"list",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2020-12-08T16:05:04.296Z\",\r\n  \"documentType\": {\r\n    \"description\": \"\",\r\n    \"idType\": 2,\r\n    \"name\": \"\",\r\n    \"status\": {\r\n      \"description\": \"\",\r\n      \"idStatus\": 1,\r\n      \"name\": \"\"\r\n    }\r\n  },\r\n  \"filetype\": \"PDF\",\r\n  \"idDocument\": 6,\r\n  \"name\": \"Liquidacion_Enero_2020.pdf\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  },\r\n  \"usuario\": {\r\n    \"company\": {\r\n      \"direction\": \"\",\r\n      \"email\": \"\",\r\n      \"idCompany\": 1,\r\n      \"razonSocial\": \"\",\r\n      \"status\": {\r\n        \"description\": \"\",\r\n        \"idStatus\": 1,\r\n        \"name\": \"\"\r\n      },\r\n      \"taxPayerId\": \"\",\r\n      \"telephone\": \"\"\r\n    },\r\n    \"direction\": \"\",\r\n    \"email\": \"\",\r\n    \"idUsuario\": 10,\r\n    \"password\": \"\",\r\n    \"roles\": [\r\n      {\r\n        \"description\": \"\",\r\n        \"idRol\": 1,\r\n        \"nombre\": \"\"\r\n      },\r\n      {\r\n        \"description\": \"\",\r\n        \"idRol\": 2,\r\n        \"nombre\": \"\"\r\n      },\r\n      {\r\n        \"description\": \"\",\r\n        \"idRol\": 3,\r\n        \"nombre\": \"\"\r\n      }\r\n    ],\r\n    \"rut\": \"\",\r\n    \"status\": {\r\n      \"description\": \"\",\r\n      \"idStatus\": 1,\r\n      \"name\": \"\"\r\n    },\r\n    \"telephone\": \"\",\r\n    \"userName\": \"\"\r\n  },\r\n  \"value\": \"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2020-12-08T16:05:04.296Z\",\r\n  \"documentType\": {\r\n    \"description\": \"\",\r\n    \"idType\": 2,\r\n    \"name\": \"\",\r\n    \"status\": {\r\n      \"description\": \"\",\r\n      \"idStatus\": 1,\r\n      \"name\": \"\"\r\n    }\r\n  },\r\n  \"filetype\": \"pdf\",\r\n  \"idDocument\": 4,\r\n  \"name\": \"Liquidacion_Enero_2020.pdf\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  },\r\n  \"usuario\": {\r\n    \"company\": {\r\n      \"direction\": \"\",\r\n      \"email\": \"\",\r\n      \"idCompany\": 1,\r\n      \"razonSocial\": \"\",\r\n      \"status\": {\r\n        \"description\": \"\",\r\n        \"idStatus\": 1,\r\n        \"name\": \"\"\r\n      },\r\n      \"taxPayerId\": \"\",\r\n      \"telephone\": \"\"\r\n    },\r\n    \"direction\": \"\",\r\n    \"email\": \"\",\r\n    \"idUsuario\": 10,\r\n    \"password\": \"\",\r\n    \"roles\": [\r\n      {\r\n        \"description\": \"\",\r\n        \"idRol\": 1,\r\n        \"nombre\": \"\"\r\n      },\r\n      {\r\n        \"description\": \"\",\r\n        \"idRol\": 2,\r\n        \"nombre\": \"\"\r\n      },\r\n      {\r\n        \"description\": \"\",\r\n        \"idRol\": 3,\r\n        \"nombre\": \"\"\r\n      }\r\n    ],\r\n    \"rut\": \"\",\r\n    \"status\": {\r\n      \"description\": \"\",\r\n      \"idStatus\": 1,\r\n      \"name\": \"\"\r\n    },\r\n    \"telephone\": \"\",\r\n    \"userName\": \"\"\r\n  },\r\n  \"value\": \"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarDocumentPageable",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/pageable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"pageable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarResumen",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/listarResumen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"listarResumen"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company\": {\r\n    \"direction\": \"\",\r\n    \"email\": \"\",\r\n    \"idCompany\": 2,\r\n    \"razonSocial\": \"\",\r\n    \"status\": {\r\n      \"description\": \"\",\r\n      \"idStatus\": 1,\r\n      \"name\": \"\"\r\n    },\r\n    \"taxPayerId\": \"\",\r\n    \"telephone\": \"\"\r\n  },\r\n  \"direction\": \"Los escritores 83\",\r\n  \"email\": \"ptatralca@gmail.com\",\r\n  \"idUsuario\": 14,\r\n  \"password\": \"abc123\",\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"\",\r\n      \"idRol\": 3,\r\n      \"nombre\": \"\"\r\n    }\r\n  ],\r\n  \"rut\": \"5869454-1\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  },\r\n  \"telephone\": \"22222222\",\r\n  \"userName\": \"useruser\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company\": {\r\n    \"direction\": \"\",\r\n    \"email\": \"\",\r\n    \"idCompany\": 2,\r\n    \"razonSocial\": \"\",\r\n    \"status\": {\r\n      \"description\": \"\",\r\n      \"idStatus\": 1,\r\n      \"name\": \"\"\r\n    },\r\n    \"taxPayerId\": \"\",\r\n    \"telephone\": \"\"\r\n  },\r\n  \"direction\": \"Los escritores 83\",\r\n  \"email\": \"ptatralca@gmail.com\",\r\n  \"idUsuario\": 13,\r\n  \"password\": \"abc123\",\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"\",\r\n      \"idRol\": 3,\r\n      \"nombre\": \"\"\r\n    }\r\n  ],\r\n  \"rut\": \"5869454-1\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  },\r\n  \"telephone\": \"22222222\",\r\n  \"userName\": \"user_api\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/list/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"list",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarUsuariosPageable",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/pageable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"pageable"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DocumentType",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Documento de Prueba\",\r\n  \"idType\": 4,\r\n  \"name\": \"TEST\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Finiquito termino de contrato laboral\",\r\n  \"idType\": 3,\r\n  \"name\": \"FINIQUITO\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/types/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"types",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarDocumentTypePageable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/documents/types/pageable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								"types",
+								"pageable"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Status",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6c86d42c-0014-47f8-8aca-d8081a887ccd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Se encuentra Procesado\",\r\n  \"idStatus\": 6,\r\n  \"name\": \"Procesado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/status?=&=&=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"status"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Se encuentra en Proceso o en procesamiento\",\r\n  \"idStatus\": 5,\r\n  \"name\": \"En Procesamiento\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/status?=&=&=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"status"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "6"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/status/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"status",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"direction\": \"Macul\",\r\n  \"email\": \"macal@gmail.com\",\r\n  \"idCompany\": 3,\r\n  \"razonSocial\": \"Macal SA\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  },\r\n  \"taxPayerId\": \"96915886-6\",\r\n  \"telephone\": \"8550021545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"direction\": \"Macul\",\r\n  \"email\": \"macal@gmail.com\",\r\n  \"idCompany\": 3,\r\n  \"razonSocial\": \"Macal INC\",\r\n  \"status\": {\r\n    \"description\": \"\",\r\n    \"idStatus\": 1,\r\n    \"name\": \"\"\r\n  },\r\n  \"taxPayerId\": \"96915886-6\",\r\n  \"telephone\": \"8550021545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/companies/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/companies/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarCompanyPageable",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/companies/pageable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"pageable"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TOKEN",
+			"item": [
+				{
+					"name": "Obtener JWT + OAUTH2 = TOKEN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "LoginController",
+			"item": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
