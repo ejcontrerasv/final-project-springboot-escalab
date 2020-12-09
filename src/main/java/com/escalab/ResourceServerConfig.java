@@ -34,11 +34,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.requestMatchers()
 			.and()
 			.authorizeRequests()
-			.antMatchers("/v2/api-docs/**").permitAll()
-			.antMatchers("/api/v1/companies/**").permitAll()
-			.antMatchers("/api/v1/documents/**").permitAll()
-			.antMatchers("/api/v1/status/**").permitAll()
-			.antMatchers("/api/v1/users/**").permitAll()
+			.antMatchers("/v2/api-docs/**").authenticated()
+			.antMatchers("/api/v1/companies/**").authenticated()
+			.antMatchers("/api/v1/documents/**").authenticated()
+			.antMatchers("/api/v1/status/**").authenticated()
+			.antMatchers("/api/v1/users/**").authenticated()
 			.antMatchers("/api/v1/tokens/**").permitAll();
 	}
 
